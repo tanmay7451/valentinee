@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Floating hearts */
+.hearts::before {
+    content: "💖 💕 💗 💓 💞 💘 💝 💖 💕";
+    position: absolute;
+    font-size: 40px;
+    animation: float 12s linear infinite;
+    top: 100%;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+@keyframes float {
+    from { top: 100%; }
+    to { top: -20%; }
+}
+
+.container {
+    background: white;
+    padding: 35px 45px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    max-width: 430px;
+    animation: pop 0.6s ease;
+}
+
+@keyframes pop {
+    from { transform: scale(0.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+h1 {
+    color: #ff2f68;
+    margin-bottom: 15px;
+}
+
+h2 {
+    color: #ff4d6d;
+    margin: 15px 0;
+}
+
+#message {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.buttons {
+    position: relative;
+    height: 65px;
+    margin-top: 10px;
+}
+
+button {
+    padding: 14px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.yes-button {
+    background: #ff3f6c;
+    color: white;
+    margin-right: 20px;
+}
+
+.yes-button:hover {
+    background: #ff174f;
+    transform: scale(1.1);
+}
+
+.no-button {
+    background: #eee;
+    position: absolute;
+}
+
+.gif_container img {
+    width: 210px;
+    margin-top: 25px;
+}
+
+#footer {
+    margin-top: 15px;
+    font-size: 13px;
+    color: #888;
+}
